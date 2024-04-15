@@ -2,8 +2,8 @@ import random
 
 
 def choose_options():
-  options = ('rock', 'paper', 'scissor')
-  user_option = input('rock, paper o scissor => ')
+  options = ('rock', 'paper', 'scissors')
+  user_option = input('rock, paper o scissors => ')
   user_option = user_option.lower()
 
   if not user_option in options:
@@ -21,8 +21,8 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
   if user_option == computer_option:
     print('Draw!')
   elif user_option == 'rock':
-    if computer_option == 'scissor':
-      print('rock beats scissor')
+    if computer_option == 'scissors':
+      print('rock beats scissors')
       print('user won!')
       user_wins += 1
     else:
@@ -35,16 +35,16 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
       print('user won')
       user_wins += 1
     else:
-      print('scissor beats paper')
+      print('scissors beats paper')
       print('computer won!')
       computer_wins += 1
-  elif user_option == 'scissor':
+  elif user_option == 'scissors':
     if computer_option == 'paper':
-      print('scissor beats paper')
+      print('scissors beats paper')
       print('user won!')
       user_wins += 1
     else:
-      print('rock beats scissor')
+      print('rock beats scissors')
       print('computer won!')
       computer_wins += 1
   return user_wins, computer_wins
